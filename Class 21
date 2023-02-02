@@ -1,0 +1,38 @@
+SCANNER CLASS(CLASS 21)
+
+
+package coreJava;
+
+import java.util.Scanner;
+
+import java.util.Scanner;
+public class ScannerStudy {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter your First name");
+		String firstName = sc.nextLine();
+		System.out.println("Please enter your Last name");
+		String lastName = sc.nextLine();
+		System.out.println("Please enter your profession");
+		String profession = sc.nextLine();
+		System.out.println("Please enter your address");
+		String address = sc.nextLine();
+		System.out.println("Please enter your house number");
+	        int houseNo = Integer.parseInt(sc.nextLine());
+	        System.out.println("Please enter your average percentage");
+	        float percentage = Float.parseFloat(sc.nextLine());
+		
+		
+		System.out.println("First Name: " + firstName);
+		System.out.println("Last Name: " + lastName);
+		System.out.println("Profession: " + profession);
+		System.out.println("Address: " + address);
+		System.out.println("House number: " + houseNo);
+		System.out.println("Percentage: " + percentage);
+		
+		
+		sc.close();
+	}
+
+}
