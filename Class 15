@@ -1,0 +1,72 @@
+ACCESS MODIFIERS(CLASS 15)
+
+
+package accessModifier1;
+
+public class A {
+	int x = 10;
+	private int y = 15;
+	public int z = 20;
+	protected int w = 25;
+	
+	public static void main(String[] args) {
+		A obj = new A();
+		System.out.println(obj.x);
+		System.out.println(obj.y);
+		System.out.println(obj.z);
+		System.out.println(obj.w);
+	}
+}
+
+
+
+package accessModifier1;
+
+public class B {
+	public static void main(String[] args) {
+		A obj = new A ();
+		System.out.println(obj.x);//default is accessible
+		System.out.println(obj.y);//private is not accessible
+		System.out.println(obj.z);//public is accessible
+		System.out.println(obj.w);//protected is accessible
+	}
+
+}
+
+
+
+
+package accessModifier2;
+import accessModifier1.A;
+
+public class C extends A {
+	public static void main(String[] args) {
+		A obj = new A ();
+		C childObj = new C();
+		System.out.println(obj.x);
+		System.out.println(childObj.x);// not visible
+		System.out.println(childObj.y);//not visible
+		System.out.println(obj.y);//private is not accessible
+		System.out.println(obj.z);//public is accessible
+		System.out.println(childObj.w);//protected is visible
+	
+
+}
+
+
+
+package accessModifier2;
+import accessModifier1.A;
+
+public class D {
+	public static void min(String[] args) {
+		A obj= new A();
+		System.out.println(obj.x);//default is not accessible outside package
+		System.out.println(obj.y);//private is not accessible
+		System.out.println(obj.z);//public is accessible
+		System.out.println(obj.w);//protected is not accessible
+
+
+	}
+
+}
