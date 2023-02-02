@@ -1,0 +1,73 @@
+ARRAY INTRODUCTION(CLASS 17)
+PART 1
+
+package arrays;
+
+public class ArrayStudy {
+	
+	static void print(int arr[]) {
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+	public static void main(String[] args) {
+		int size = 5;
+		int arr[] = new int[size];
+		System.out.println(arr[0]);
+		System.out.println(arr[1]);
+		System.out.println(arr[2]);
+		System.out.println(arr[3]);
+		System.out.println(arr[4]);
+		
+		print(arr);
+		for(int i=0; i<size; i++) {
+			arr[i] = i+1;
+		}
+		
+		int arr2[] = {1 , 2, 3};
+		print(arr2);
+		
+		int copyArray[] = new int[2*size];
+		for(int i=0; i<size; i++) {
+			copyArray[i]=arr[i];
+		}
+		copyArray[5]=6;
+		copyArray[6]=7;
+		print(copyArray);
+	}
+
+}
+
+
+
+
+PART 2
+
+
+package arrays;
+
+public class PassingArray {
+	static void addOne(int x) {
+		x = x+1;
+	}
+	static void addOne(int arr[]) {
+		for(int i=0; i<arr.length; i++) {
+			arr[i]++;
+		}
+	}
+	
+	public static void main(String[] args) {
+		int x = 10;
+		addOne(x);
+		System.out.println(x);
+		
+		int arr[] = {1,2,3,4,5};
+		addOne(arr);
+		for(int i=0; i<arr.length; i++) {
+			System.out.println(arr[i] + " ");
+		}
+		System.out.println();
+	}
+
+}
